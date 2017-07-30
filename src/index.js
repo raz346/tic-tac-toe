@@ -1,8 +1,11 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import './index.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className = "Square">
-      { /*TODO */}
+      <button className="square">
+        {/* TODO */}
       </button>
     );
   }
@@ -10,11 +13,11 @@ class Square extends React.Component {
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <square/>;
+    return <Square />;
   }
 
   render() {
-    const status = "Next Player";
+    const status = 'Next player: X';
 
     return (
       <div>
@@ -44,20 +47,20 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board/>
+          <Board />
         </div>
         <div className="game-info">
-          <div>{/*status*/</div>
-          <ol> {/* TODO*/}</ol>
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
         </div>
       </div>
     );
   }
 }
 
+// ========================================
 
 ReactDom.render(
-
-  <Game/>,
-  document.getElementByID('root')
+  <Game />,
+  document.getElementById('root')
 );
